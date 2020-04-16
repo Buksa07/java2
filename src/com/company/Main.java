@@ -63,5 +63,12 @@ public class Main {
         float e = c % d;
         System.out.println(e);
 
+        int i = 8;
+        int j = 4;
+        int h = i % j;
+        System.out.println(h);
+
+        System.out.println("ceva: " + 3 +5);
+
     }
 }
