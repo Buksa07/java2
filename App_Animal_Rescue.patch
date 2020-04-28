@@ -1,0 +1,319 @@
+Index: src/AnimalRescue/Dog.java
+===================================================================
+--- src/AnimalRescue/Dog.java	(revision 278ae449d6b02edbb8c5eeaf40421737920f669b)
++++ src/AnimalRescue/Animal.java	(date 1588060575533)
+@@ -1,18 +1,81 @@
+ package AnimalRescue;
+ 
+-public class Dog {
++public class Animal {
++
++    private String name;
++    private int age;
++    private String color;
++    private String race;
++    private int chipNr;
++    private float weight;
++    private int healt;
++    private int hungry;
++    private int moodLvl;
++    private String favoriteFod;
++    private String favoriteActivity;
+ 
+-    public String name = "Nero";
+-    public int age = 6;
+-    public String color = "Black";
+-    public String race = "Ciobanesc";
+-    public int chipNr = 12346;
+-    public float weight = 40.7F;
+-    public int healt = 8;
+-    public int hungry = 10;
+-    public int moodLvl = 7;
+-    public String favotieFood = "Royal Canin";
+-    public String favoriteActivity = "Runing";
++
++    public String getName (){
++        return name;
++    }
++    public void setName (String name){
++        this.name = name;
++    }
++    public int getAge (){
++        return age;
++    }
++    public void setAge ( int age){
++        this.age = age;
++    }
++    public String getColor(){
++        return color;
++    }
++    public void setColor(String color){
++        this.color = color;
++    }
++    public String getRace(){
++        return race;
++    }
++    public void setRace(String race){
++        this.race = race;
++    }
++    public int getChipNr(){
++        return chipNr;
++    }
++    public void setChipNr(int chipNr){
++        this.chipNr = chipNr;
++    }
++    public float getWeight (){
++        return weight;
++    }
++    public void setWeight (float weight){
++        this.weight = weight;
++    }
++    public int getHealt (){
++        return healt;
++    }
++    public void setHealt (int healt){
++        this.healt = healt;
++    }
++    public int getHungry(){
++        return hungry;
++    }
++    public void setHungry(int hungry){
++        this.hungry = hungry;
++    }
++    public String getFavotieFood(){
++        return favoriteFod;
++    }
++    public void setFavotieFood(String favotieFood){
++        this.favoriteFod = favotieFood;
++    }
++    public String getFavoriteActivity(){
++        return favoriteActivity;
++    }
++    public void setFavoriteActivitye(String favoriteActivity){
++        this.favoriteActivity = favoriteActivity;
++    }
++
+ 
+ 
+ 
+Index: src/AnimalRescue/AppMain.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/AnimalRescue/AppMain.java	(revision 278ae449d6b02edbb8c5eeaf40421737920f669b)
++++ src/AnimalRescue/AppMain.java	(date 1588062590451)
+@@ -3,19 +3,56 @@
+ public class AppMain {
+ 
+     public static void main(String[] args) {
+-        Dog myObject = new Dog ();
+-        Adoptator myAdoptator = new Adoptator ();
+-        Food myFood = new Food ();
+-        recreationalActivity myActivity = new recreationalActivity ();
+-        Veterinarian myDoctor = new Veterinarian();
++        Animal nero = new Animal();
++        nero.setName("Nero");
++        nero.setAge(5);
++        nero.setColor("Negru");
++        nero.setChipNr(1236);
++        nero.setHealt(10);
++        nero.setWeight(45.5F);
++        nero.setHungry(10);
++        nero.setFavotieFood("Prinea");
++        nero.setFavoriteActivitye("Runing");
++
++        Food food = new Food();
++        food.setName("Purina");
++        food.setAmount(15);
++        food.setPrice(15.67F);
++        food.setAvailableInStock("Yes");
++
++        Adoptator adop = new Adoptator();
++        adop.setName("Albacus");
++        adop.setMoney(45.10F);
++
++        Veterinarian vet = new Veterinarian();
++        vet.setName("Dr. Vasile");
++        vet.setSpecialization("Doctor");
++
+ 
+ 
+-        System.out.println(myObject.name);
+-        System.out.println(myObject.color);
+-        System.out.println(myAdoptator.Money + "$");
+-        System.out.println(myFood.availableInStock);
+-        System.out.println(myActivity.name);
+-        System.out.println(myDoctor.specialization);
++        System.out.println(nero.getName());
++        System.out.println(nero.getAge());
++        System.out.println(nero.getColor());
++        System.out.println(nero.getChipNr());
++        System.out.println(nero.getWeight());
++        System.out.println(nero.getHungry());
++        System.out.println(nero.getFavotieFood());
++        System.out.println(nero.getFavoriteActivity());
++        System.out.println(food.getName());
++        System.out.println(food.getAmount());
++        System.out.println(food.getPrice() + "$");
++        System.out.println(food.getAvailableInStock());
++        System.out.println(adop.getName());
++        System.out.println(adop.getMoney()+ "$");
++        System.out.println(vet.getName());
++        System.out.println(vet.getSpecializatio());
++
++
++
++
++
++
++
+ 
+ 
+     }
+Index: src/AnimalRescue/Adoptator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/AnimalRescue/Adoptator.java	(revision 278ae449d6b02edbb8c5eeaf40421737920f669b)
++++ src/AnimalRescue/Adoptator.java	(date 1588062110310)
+@@ -2,8 +2,21 @@
+ 
+ public class Adoptator {
+ 
+-    public String Name = "Ionut";
+-    public float Money = 35.5F;
++    private String Name;
++    private float Money;
++
++    public String getName(){
++        return Name;
++    }
++    public void setName(String name){
++        this.Name = name;
++    }
++    public float getMoney(){
++        return Money;
++    }
++    public void setMoney(float money){
++        this.Money = money;
++    }
+ 
+ 
+ }
+Index: src/AnimalRescue/Food.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/AnimalRescue/Food.java	(revision 278ae449d6b02edbb8c5eeaf40421737920f669b)
++++ src/AnimalRescue/Food.java	(date 1588061381643)
+@@ -2,10 +2,35 @@
+ 
+ public class Food {
+ 
+-    public String name = "Royal Canin";
+-    public float price = 15.5F;
+-    public int amount = 12;
+-    public String availableInStock = "Yes";
++    private String name = "Royal Canin";
++    private float price = 15.5F;
++    private int amount = 12;
++    private String availableInStock = "Yes";
++
++    public String getName(){
++        return name;
++    }
++    public void setName(String name){
++     this.name = name;
++    }
++    public float getPrice(){
++        return price;
++    }
++    public void setPrice(float price){
++        this.price = price;
++    }
++    public int getAmount(){
++        return amount;
++    }
++    public void setAmount(int amount){
++        this.amount = amount;
++    }
++    public String getAvailableInStock(){
++        return availableInStock;
++    }
++    public void setAvailableInStock(String availableInStock){
++        this.availableInStock = availableInStock;
++    }
+ 
+ 
+ }
+Index: src/AnimalRescue/Veterinarian.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/AnimalRescue/Veterinarian.java	(revision 278ae449d6b02edbb8c5eeaf40421737920f669b)
++++ src/AnimalRescue/Veterinarian.java	(date 1588062524643)
+@@ -2,8 +2,21 @@
+ 
+ public class Veterinarian {
+ 
+-    public String name = "Dr. Alex";
+-    public String specialization = "veterinary doctor";
++    private String name;
++    private String specialization;
++
++    public String getName(){
++        return name;
++    }
++    public void setName(String name){
++        this.name = name;
++    }
++    public String getSpecializatio(){
++        return specialization;
++    }
++    public void setSpecialization(String specialization){
++        this.specialization = specialization;
++    }
+ 
+ 
+ 
+Index: src/com/company/ControlLab3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/com/company/ControlLab3.java	(date 1588008248369)
++++ src/com/company/ControlLab3.java	(date 1588008248369)
+@@ -0,0 +1,29 @@
++package com.company;
++
++public class ControlLab3 {
++
++    public static void main(String[] args){
++        Calculator cal = new Calculator();
++        LogicalOp op = new LogicalOp();
++        int biggest = op.checkBiggerNumber(2,3);
++        System.out.println("The bigger number is:" + biggest);
++        System.out.println("The text is equal: " + op.text("FastTrackIT","FastTrackIT"));
++        System.out.println("The text is not equal: "+ op.text2("FastTrackIT","FastTrackIT"));
++        System.out.println("Check text3: " + op.text3("FastTrackIT", 2));
++        System.out.println("Check text3: " + op.text3("FastTrackIT", 6));
++        System.out.println("Check text4: " + op.text4(9));
++        System.out.println("Check text5:  " + op.text5(4));
++        op.caseNumber(6);
++        System.out.println(op.isNumberEven(15));
++        System.out.println("Is eligible to vot: " + op.isEligibleToVote(25));
++        System.out.println("Cel mai mare numar: " + op.bigNumber(7,5,6));
++        System.out.println(cal.afisareViteza(5,6));
++        }
++
++
++
++
++
++    }
++
++
