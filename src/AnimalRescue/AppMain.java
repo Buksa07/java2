@@ -48,6 +48,14 @@ public class AppMain {
         mori.setName("Royal");
         mori.setPrice(16);
 
+        Boyadoptator boy = new Boyadoptator();
+        boy.setName("Ionut");
+        boy.setMoney(17);
+
+        GirlAdoptator girl = new GirlAdoptator();
+        girl.setName("Larisa");
+        girl.setMoney(25.70F);
+
 
 
 
@@ -75,9 +83,13 @@ public class AppMain {
         System.out.println(mitzi.getColor());
         System.out.println(mitzi.getFavoriteActivity());
         System.out.println(royal.getAvailableInStock());
-        System.out.println(royal.getPrice() + "$");
+        System.out.println(royal.getPrice() + " $");
         System.out.println(mori.getName());
         System.out.println(mori.getPrice());
+        System.out.println(boy.getName());
+        System.out.println(boy.getMoney());
+        System.out.println(girl.getName());
+        System.out.println(girl.getMoney() + " $");
 
 
 
