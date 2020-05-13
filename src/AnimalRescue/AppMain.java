@@ -14,6 +14,7 @@ public class AppMain {
         nero.setFavotieFood("Prinea");
         nero.setFavoriteActivitye("Runing");
 
+
         Food food = new Food();
         food.setName("Purina");
         food.setAmount(15);
@@ -27,6 +28,26 @@ public class AppMain {
         Veterinarian vet = new Veterinarian();
         vet.setName("Dr. Vasile");
         vet.setSpecialization("Doctor");
+        Dog axel = new Dog();
+        axel.setName("Axel");
+        axel.setAge(15);
+        axel.setColor("Black");
+
+
+        Cat mitzi = new Cat();
+        mitzi.setName("Mitzi");
+        mitzi.setAge(15);
+        mitzi.setColor("Gri");
+        mitzi.setFavoriteActivitye("runining silent");
+
+        DogFood royal = new DogFood();
+        royal.setAvailableInStock("yes");
+        royal.setPrice(25);
+
+        CatFood mori = new CatFood();
+        mori.setName("Royal");
+        mori.setPrice(16);
+
 
 
 
@@ -46,6 +67,20 @@ public class AppMain {
         System.out.println(adop.getMoney()+ "$");
         System.out.println(vet.getName());
         System.out.println(vet.getSpecializatio());
+        System.out.println(axel.getName());
+        System.out.println(axel.getAge());
+        System.out.println(axel.getColor());
+        System.out.println(mitzi.getName());
+        System.out.println(mitzi.getAge());
+        System.out.println(mitzi.getColor());
+        System.out.println(mitzi.getFavoriteActivity());
+        System.out.println(royal.getAvailableInStock());
+        System.out.println(royal.getPrice() + "$");
+        System.out.println(mori.getName());
+        System.out.println(mori.getPrice());
+
+
+
 
 
 

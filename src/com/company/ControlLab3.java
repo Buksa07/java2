@@ -18,6 +18,23 @@ public class ControlLab3 {
         System.out.println("Is eligible to vot: " + op.isEligibleToVote(25));
         System.out.println("Cel mai mare numar: " + op.bigNumber(7,5,6));
         System.out.println(cal.afisareViteza(5,6));
+        op.printToHundred(1);
+        op.getMinusNumber(1);
+        op.printTwoNumbers(1,50);
+        op.printTwoParamaetri(5,2);
+        op.printEvenNumbers();
+        op.printOddNumbers();
+        System.out.println(op.getSumHundred());
+        System.out.println(op.getAverageFromHundred());
+        op.printHundredWhile(1);
+        op.printMinusWhile(1);
+        op.printTwoParamatrisWhile(1,10);
+        op.printTwoParametrisWhile1(1,5);
+        op.printEvenNumberWhile();
+        op.printOddNumbersWhile();
+        op.sumaAverageWHILE();
+        op.averageNumberWhile(21,49);
+
         }
 
 

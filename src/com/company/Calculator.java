@@ -58,4 +58,5 @@ public class Calculator {
         return viteza1;
     }
 
+
 }
