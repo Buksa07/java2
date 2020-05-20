@@ -5,6 +5,7 @@ public class ControlLab3 {
     public static void main(String[] args){
         Calculator cal = new Calculator();
         LogicalOp op = new LogicalOp();
+        int [] myArray = op.getArrayHundred();
         int biggest = op.checkBiggerNumber(2,3);
         System.out.println("The bigger number is:" + biggest);
         System.out.println("The text is equal: " + op.text("FastTrackIT","FastTrackIT"));
@@ -34,6 +35,21 @@ public class ControlLab3 {
         op.printOddNumbersWhile();
         op.sumaAverageWHILE();
         op.averageNumberWhile(21,49);
+        op.fibonacci();
+        op.wozaCozaLoza();
+        op.printArray(myArray);
+        System.out.println(cal.impartire(10,5,2));
+        op.printEvenNumbers();
+        System.out.println(op.checkAvreageNumbers(myArray));
+        System.out.println(op.checkTrueFalse(new String[]{"Audi"},"Volvo"));
+        System.out.println(op.checkNumbers(new int[]{1,2,3,4,5},4));
+        op.printGrila();
+        op.checkNumbersValues(new int[]{1},5);
+        System.out.println(new int[]{1});
+        op.littleNumber(new int[]{1,5,4,6});
+        System.out.println();
+
+
 
         }
 

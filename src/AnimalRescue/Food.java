@@ -2,10 +2,10 @@ package AnimalRescue;
 
 public class Food {
 
-    private String name = "Royal Canin";
-    private float price = 15.5F;
-    private int amount = 12;
-    private String availableInStock = "Yes";
+    private String name;
+    private float price;
+    private int amount;
+    private String availableInStock;
 
     public String getName(){
         return name;

@@ -134,7 +134,7 @@ public class LogicalOp {
             return c;
         }else return x;
     }
-    //------------------For Lo
+    //------------------For Loops-------------------------------
     public void printToHundred(int number){
         for (int i = number; i <= 100; i++ ){
             System.out.println(i);
@@ -308,8 +308,226 @@ public class LogicalOp {
         float average = sum/count;
         System.out.println("Media numerelor :" + sum);
         return average;
-
     }
+    //9. Creati o metoda care sa afiseze primele 20 de numere din sirul lui Fibonacci.
+    public void fibonacci() {
+
+        int count = 20;
+
+        int num1 = 0;
+
+        int num2 = 1;
+
+        int i=1;
+
+        while(i<=count)
+
+        {
+
+            System.out.print(num1+" ");
+
+            int sumOfPrevTwo = num1 + num2;
+
+            num1 = num2;
+
+            num2 = sumOfPrevTwo;
+
+            i++;
+        }
+    }
+
+    public void wozaCozaLoza () {
+        int x = 1;
+        while (x <= 110){
+            if ((x % 3 == 0) &&(x % 5 == 0) &&(x % 7 == 0) ){
+                System.out.println("CozaLozaWoza");
+            }else if ((x % 7 == 0) && (x % 5== 0)){
+                System.out.println("WozaLoza");
+            }else if ((x % 3 == 0) &&(x % 5 ==0)){
+                System.out.println("CozaLoza");
+            }else if ((x % 3 == 0) & (x % 7 == 0)){
+                System.out.println("CozaWoza");
+            }else if (x % 5 == 0){
+                System.out.println("Loza");
+            }else if (x % 7== 0){
+                System.out.println("Woza");
+            }else if (x % 3 ==0){
+                System.out.println("Coza");
+            }else {
+                System.out.println(x + "");
+            }
+            x++;
+            if (x % 11 == 0){
+                System.out.println();
+            }
+
+        }
+    }
+    //-------------------ARRAYS-----------------------
+
+   //2.  In clasa LogicalOp, creati o metoda care sa scrie pe un array de 100 de pozitii, valorile de la 1 la 100.
+   // Sa se afiseze progresul in consola pe tot parcursul. Apelati metoda in main() pentru a verifica daca functioneaza.
+    public int[] getArrayHundred (){
+        int[] array =  new int[100];
+        for (int i = 0; i < 100; i++){
+            array[i]= i+1;
+        }
+        return array;
+    }
+    public void printArray (int [] array){
+        for (int i = 0; i < array.length; i++ ){
+            System.out.println(array [i]);
+        }
+    }
+    //3. Creati o metoda care primeasca un parametru de tip array de numere intregi gol,
+    // si sa il returneze populat cu toate valorile pare de la 1 la 100.
+    // Apelati metoda in main() pentru a verifica daca functioneaza.
+    // Atentie, metoda returneaza un array, deci acesta va trebui surprins si afisat folosind o bucla.
+
+
+    public int[] checkEvenNumbers () {
+        int [] array = new int[100];
+        for (int i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+            }
+        }
+        return array;
+    }
+
+    public void printEvenNumbers (int [] array){
+        for (int i = 0; i <= array.length; i++){
+            System.out.println(array[i]);
+        }
+    }
+    //4. Creati o metoda care sa primeasca un parametru de tip array de numere, si sa fie populat cu valori.
+    // Metoda sa calculeze si sa returneze media numerelor din array.
+    // Apelati metoda in main() pentru a verifica daca functioneaza.
+    public float checkAvreageNumbers(int[] array) {
+        float media = 0;
+        float sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        media = sum/array.length;
+        return media;
+    }
+    //5. Creati o metoda care sa primeasca un parametru de tip array de string-uri, populat cu valori,
+    // si un parametru de tip String. Metoda sa verifice daca valoarea string-ului primit se regaseste in array-ul primit,
+    // iar daca da sa returneze true iar daca nu, sa returneze false.
+    // Apelati metoda in main() pentru a verifica daca functioneaza.
+   // Cum se apeleaza o meotda care are ca si parametru un ray?
+
+    public boolean checkTrueFalse (String[] arrayString, String x) {
+        for (int i = 0; i < arrayString.length; i++) {
+            if (arrayString[i] == x) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void checkTrueFalse() {
+    }
+    //6. Creati o metoda care sa primeasca un parametru de tip array de numere, populat cu valori,
+    // si un parametru de tip numar. Metoda sa verifice daca numarul primit se afla in array-ul primit,
+    // si daca da, atunci sa returneze pozitia pe care se afla numarul.
+    // Apelati metoda in main() pentru a verifica daca functioneaza.
+    public int checkNumbers(int[] array, int nr){
+        int sum = 0;
+        for (int i=0;i< array.length;i++){
+            if (array[i]== nr){
+                System.out.println("Numarul se afla in array iar pozitia este :");
+                sum = i;
+            }
+        } return sum;
+    }
+    //7. Creati o metoda care sa afiseze urmatoarea grila, folosind un array:
+    //- - - - - - - - - -
+    //
+    //- - - - - - - - - -
+    //
+    //- - - - - - - - - -
+    //
+    //- - - - - - - - - -
+    //
+    //- - - - - - - - - -
+    //
+    //- - - - - - - - - -
+    //
+    //- - - - - - - - - -
+    //
+    //- - - - - - - - - -
+    //
+    //- - - - - - - - - -
+    //
+    //- - - - - - - - - -
+    public String[] printGrila () {
+
+        String[] grila = new String[10];
+        grila[0]= "--------- \n" +
+                  "---------\n" +
+                  "---------\n" +
+                  "---------\n" +
+                  "---------\n" +
+                  "---------\n" +
+                  "---------";
+
+        System.out.println(grila[0]);
+        return grila;
+    }
+    //8. Creati o metoda care sa primeasca un parametru de tip array de numere, populat cu valori,
+    // si un parametru de tip numar. Metoda sa verifice daca numarul exista in array, si daca da,
+    // sa returneze array-ul primit, fara acel numar.
+    // Apelati metoda in main() pentru a verifica daca functioneaza.
+    public int checkNumbersValues(int [] array,int x){
+        int sum =0;
+        for (int i = 0;i<array.length; i++){
+            if (array[i]== x);
+            System.out.println("Da este array-ul primit");
+        }
+        return sum;
+    }
+    //9. Creati o metoda care sa primeasca un array, si sa returneze al doilea cel mai mic numar din array.
+    // Apelati metoda in main() pentru a verifica daca functioneaza.
+    public void littleNumber (int[] array){
+       int i = 0;
+        int nr = 0;
+        int[] newArray = new int[10];
+        array[0] = 1;
+         array[1] = 8;
+         array[2] = 7;
+         array[3] = 10;
+         array[4] = 13;
+        int aux = 0;
+       for (i = 0;i <= array.length;i++){
+           if (array[i] < array[i+1]){
+              newArray[10] = array[i];
+           }
+           else{
+               aux = array[i];
+               array[i] = array[i+1];
+               array[i+1] = aux;
+           }
+       }
+        nr = array[i+1];
+        System.out.println("Al doilea cel mai mic nr :" + nr);
+   }
+   //10. Creati o metoda care sa primeasca doi parametrii: un array populat cu valori, si un array gol.
+    // Metoda sa copieze toate valorile din primul array, parcurgandu-l, in cel de-al doilea.
+    // Apelati metoda in main() pentru a verifica daca functioneaza.
+   public int[] copyArray(int[] firstArray, int[] emptyArray) {
+
+       for (int i = 0, j = 0; i < firstArray.length; i++) {
+
+           emptyArray[j] = firstArray[i];
+
+           j++;
+
+       }
+
+       return emptyArray;
+
+   }
 
 
 
