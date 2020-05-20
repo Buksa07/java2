@@ -489,29 +489,29 @@ public class LogicalOp {
     }
     //9. Creati o metoda care sa primeasca un array, si sa returneze al doilea cel mai mic numar din array.
     // Apelati metoda in main() pentru a verifica daca functioneaza.
-    public void littleNumber (int[] array){
-       int i = 0;
-        int nr = 0;
-        int[] newArray = new int[10];
-        array[0] = 1;
-         array[1] = 8;
-         array[2] = 7;
-         array[3] = 10;
-         array[4] = 13;
-        int aux = 0;
-       for (i = 0;i <= array.length;i++){
-           if (array[i] < array[i+1]){
-              newArray[10] = array[i];
-           }
-           else{
-               aux = array[i];
-               array[i] = array[i+1];
-               array[i+1] = aux;
-           }
-       }
-        nr = array[i+1];
-        System.out.println("Al doilea cel mai mic nr :" + nr);
-   }
+   // public void littleNumber (int[] array){
+    //   int i = 0;
+      //  int nr = 0;
+      //  int[] newArray = new int[10];
+     //   array[0] = 1;
+     //    array[1] = 8;
+     //    array[2] = 7;
+    //     array[3] = 10;
+     //    array[4] = 13;
+     //   int aux = 0;
+      // for (i = 0;i <= array.length;i++){
+      //     if (array[i] < array[i+1]){
+       //       newArray[10] = array[i];
+       //    }
+        //   else{
+         //      aux = array[i];
+         //      array[i] = array[i+1];
+         //      array[i+1] = aux;
+       //    }
+      // }
+     //   nr = array[i+1];
+      //  System.out.println("Al doilea cel mai mic nr :" + nr);
+ //  }
    //10. Creati o metoda care sa primeasca doi parametrii: un array populat cu valori, si un array gol.
     // Metoda sa copieze toate valorile din primul array, parcurgandu-l, in cel de-al doilea.
     // Apelati metoda in main() pentru a verifica daca functioneaza.

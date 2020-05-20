@@ -59,6 +59,8 @@ public class AppMain {
 
 
 
+
+
         System.out.println(nero.getName());
         System.out.println(nero.getAge());
         System.out.println(nero.getColor());
@@ -90,6 +92,9 @@ public class AppMain {
         System.out.println(boy.getMoney());
         System.out.println(girl.getName());
         System.out.println(girl.getMoney() + " $");
+        axel.run();
+        mitzi.speak();
+        axel.speak();
 
 
 

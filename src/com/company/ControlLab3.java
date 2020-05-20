@@ -46,7 +46,7 @@ public class ControlLab3 {
         op.printGrila();
         op.checkNumbersValues(new int[]{1},5);
         System.out.println(new int[]{1});
-        op.littleNumber(new int[]{1,5,4,6});
+     //   op.littleNumber(new int[]{1,5,4,6});
         System.out.println();
 
 
