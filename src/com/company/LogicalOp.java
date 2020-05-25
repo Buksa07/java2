@@ -426,8 +426,7 @@ public class LogicalOp {
         return false;
     }
 
-    public void checkTrueFalse() {
-    }
+
     //6. Creati o metoda care sa primeasca un parametru de tip array de numere, populat cu valori,
     // si un parametru de tip numar. Metoda sa verifice daca numarul primit se afla in array-ul primit,
     // si daca da, atunci sa returneze pozitia pe care se afla numarul.

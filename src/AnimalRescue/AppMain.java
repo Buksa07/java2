@@ -25,7 +25,7 @@ public class AppMain {
         adop.setName("Albacus");
         adop.setMoney(45.10F);
 
-        Veterinarian vet = new Veterinarian();
+        MedicalStaff vet = new MedicalStaff();
         vet.setName("Dr. Vasile");
         vet.setSpecialization("Doctor");
         Dog axel = new Dog();
@@ -55,6 +55,8 @@ public class AppMain {
         GirlAdoptator girl = new GirlAdoptator();
         girl.setName("Larisa");
         girl.setMoney(25.70F);
+
+        Nurse nurse= new Nurse();
 
 
 
@@ -95,6 +97,12 @@ public class AppMain {
         axel.run();
         mitzi.speak();
         axel.speak();
+        mitzi.run();
+        mitzi.eat();
+        nurse.heal();
+        vet.heal();
+
+
 
 
 
