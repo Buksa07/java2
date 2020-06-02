@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.List;
+
 public class LogicalOp {
     public int checkBiggerNumber(int first, int second) {
         if (first > second) {
@@ -527,8 +529,66 @@ public class LogicalOp {
        return emptyArray;
 
    }
+   //--------------------List-------------------------------------------------------------------------
+    //1.Scrieti o metoda Java, care sa primeasca parametru o Lista, si sa afiseze, pe rand, toate valorile din lista,
+    // fiecare pe rand nou.
 
+    public void printList(List thislist){
+        for (int i = 0; i<thislist.size(); i++){
+            System.out.println(thislist.get(i));
+        }
+    }
+    //2.Scrieti o metoda Java, care sa primeasca doi parametrii: un parametru sa fie o lista de numere,
+    // si celalalt un numar (real sau intreg).
+    // Metoda sa adauge numarul primit ca si parametru la final de lista.
 
+    public void addNumberToList(List thislist, int number){
+        thislist.add(number);
+    }
+    //3.Scrieti o metoda Java, care sa primeasca doi parametrii: un parametru de tip Lista, iar celalalt un
+    // numar intreg.
+    // Sa se parcurga lista si sa afiseze, pe rand, toate valorile din lista, fiecare pe rand nou,
+    // pornind de la numarul intreg primit ca si parametru.
+
+    public void printListByIndex(List thislist, int y){
+        for (int i = y;i < thislist.size(); i++){
+            System.out.println(thislist.get(i));
+        }
+    }
+    //4.Scrieti o metoda Java, care sa primeasca parametru o Lista, si sa afiseze, pe rand, toate valorile din lista,
+    // dar invers(de la capat la inceput).
+    public void printLineReverse(List thislist){
+        for (int i= thislist.size()-1; i >= 0;i--){
+            System.out.println(thislist.get(i));
+        }
+    }
+    //5.Scrieti o metoda Java, care sa primeasca trei parametrii: unul de tip Lista de String-uri, unul de tip intreg,
+    // si unul de tip String. Metoda sa adauge parametrul de tip String in lista primita, iar parametrul de tip intreg
+    // reprezinta pozitia la care sa fie pus acel String.
+    public void addStringToMyList(List<String> thislist, int index, String text){
+        thislist.add(index,text);
+    }
+    //6.Scrieti o metoda Java, care sa primeasca doi parametrii. Primul dintre ei va fi o Lista, iar metoda
+    // sa ia al doilea parametru si sa il adauge pe prima pozitie din lista.
+    public void addNumbertoFirstIndex(List thislist, int number){
+        thislist.add(0,number);
+    }
+    //7.Scrieti o metoda Java care sa primeasca parametru o Lista, si sa afiseze ce valori are lista,
+    // si ce pe ce pozitie. (Ex: “Pe pozitia 1 valoare este 4”).
+    public void printListIndexandElements(List thislist){
+        for (int i = 0; i<thislist.size(); i++)
+            System.out.println("Index "+i+" are elementul "+thislist.get(i));
+    }
+    ////8.Scrieti o metoda Java care sa primeasca o Lista si sa returneze cel mai mare numar din ea.
+    public int getBiggestNrfromtheList (List thislist){
+        int biggest = 0;
+        for (int i=0 ; i<thislist.size(); i++){
+            if ((int)thislist.get(i)>biggest){
+                biggest = (int)thislist.get(i);
+            }
+        }
+        return biggest;
+    }
 
 
 
