@@ -1,6 +1,6 @@
 package AnimalRescue;
 
-public class Animal {
+public abstract class Animal {
 
     private String name;
     private int age;
@@ -75,18 +75,15 @@ public class Animal {
     public void setFavoriteActivitye(String favoriteActivity){
         this.favoriteActivity = favoriteActivity;
     }
-    public void run (){
-        System.out.println("runing");
-    }
-    public void speak (){
-        System.out.println("latra");
-    }
-    public void sleep(){
-        System.out.println("zzzZZZZzzz");
-    }
-    public void eat(){
-        System.out.println("eating");
-    }
+
+    public abstract void run ();
+
+    public abstract void speak ();
+
+    public abstract void sleep();
+
+    public abstract void eat();
+
 
 
 

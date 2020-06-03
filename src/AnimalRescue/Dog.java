@@ -5,10 +5,10 @@ public class Dog extends Animal{
         System.out.println("Ham");
     }
     public void run (){
-        System.out.println("alearga");
+        System.out.println("run");
     }
     public void eat (){
-        System.out.println("eat a lott");
+        System.out.println("eat pedigre");
     }
     public void sleep (){
         System.out.println("sleeps loudly");

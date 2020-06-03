@@ -1,6 +1,6 @@
 package AnimalRescue;
 
-public class MedicalStaff {
+public abstract class MedicalStaff {
 
     private String name;
     private String specialization;
@@ -17,10 +17,10 @@ public class MedicalStaff {
     public void setSpecialization(String specialization){
         this.specialization = specialization;
     }
-    public void heal(){
-        System.out.println("healing");
-    }
 
+    public abstract void heal();
+    public abstract void clean();
+    public abstract void save();
 
 
 

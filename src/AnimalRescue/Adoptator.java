@@ -1,6 +1,6 @@
 package AnimalRescue;
 
-public class Adoptator {
+public abstract class Adoptator {
 
     private String Name;
     private float Money;
@@ -17,6 +17,11 @@ public class Adoptator {
     public void setMoney(float money){
         this.Money = money;
     }
+
+    public abstract void buy();
+    public abstract void loves();
+
+
 
 
 }

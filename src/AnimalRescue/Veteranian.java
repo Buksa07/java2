@@ -5,5 +5,15 @@ public class Veteranian extends MedicalStaff {
         System.out.println("healing like a doctor");
     }
 
+    @Override
+    public void clean() {
+        System.out.println("clean the patient");
+    }
+
+    @Override
+    public void save() {
+        System.out.println("save animals");
+    }
+
 }
 
