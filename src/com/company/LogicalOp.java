@@ -15,9 +15,9 @@ public class LogicalOp {
     // Creati o metoda de tip String, care sa primeasca un parametru de tip String.
     // Verificati daca textul ce vine ca si parametru este egal cu “FastTrackIT”. Daca da, atunci metoda sa returneze
     // “Learning text comparison”. Daca nu, atunci metoda sa returneze “Got to try some more”
-    public String text(String first, String second) {
+    public String text(String first) {
 
-        if (first.equals(second)) {
+        if (first.equals("FastTrackIT")) {
             return "Learning text comparison";
         } else {
             return "Got to try some more";
